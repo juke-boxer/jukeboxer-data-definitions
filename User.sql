@@ -1,3 +1,5 @@
+CREATE EXTENSION pgcrypto; --Allows PostgreSQL to understand UUIDS.  Only have to create the extension once for a database
+
 CREATE TABLE user (
         id uuid NOT NULL DEFAULT gen_random_uuid(),
         firstname VARCHAR(255) NOT NULL DEFAULT(''),
